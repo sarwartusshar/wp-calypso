@@ -25,6 +25,7 @@ class SuggestionSearch extends Component {
 		id: PropTypes.string,
 		placeholder: PropTypes.string,
 		onChange: PropTypes.func,
+		onSelect: PropTypes.func,
 		sortResults: PropTypes.func,
 		suggestions: PropTypes.array,
 		value: PropTypes.string,
@@ -36,6 +37,7 @@ class SuggestionSearch extends Component {
 		id: '',
 		placeholder: '',
 		onChange: noop,
+		onSelect: noop,
 		sortResults: null,
 		suggestions: [],
 		value: '',
@@ -110,7 +112,7 @@ class SuggestionSearch extends Component {
 	handleSuggestionMouseDown = position => {
 		this.updateInputValue( position.label );
 		this.hideSuggestions();
-		this.props.onChange( position.label );
+		this.props.onSelect( position.label );
 	};
 
 	getSuggestions() {
@@ -130,7 +132,7 @@ class SuggestionSearch extends Component {
 
 	updateFieldFromSuggestion( newValue ) {
 		this.updateInputValue( newValue );
-		this.props.onChange( newValue, true );
+		this.props.onSelect( newValue );
 	}
 
 	render() {

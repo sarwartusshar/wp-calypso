@@ -8,8 +8,8 @@ SuggestionSearch is a bundled component of FormTextInput and Suggestions which e
 ```es6
 import SuggestionSearch from 'components/suggestion-search';
 
-onChange( newValue, isNavigating ) {
-	console.log( 'New value: ', newValue, 'isNavigating:', isNavigating );
+onChange( newValue ) {
+	console.log( 'New value: ', newValue );
 }
 
 render() {
@@ -36,7 +36,10 @@ It's common that this component is used in a form. This `id` prop is passed to t
 The placeholder text to show if nothing has been entered yet.
 
 ### `{Func} onChange`
-The callback function for receiving updated value, whether it's by typing, autocompletion, or suggestion picking. If a user is navigating through the list, it will pass an additional `true` as the 2nd argument.
+The callback function for receiving updated value as the user updates the search field.
+
+### `{Func} onSelect`
+The callback function for receiving updated value when the user selects a suggestion.
 
 ### `{Func} sortResults` 
 An optional method for sorting the results that we display in the suggestion list.
