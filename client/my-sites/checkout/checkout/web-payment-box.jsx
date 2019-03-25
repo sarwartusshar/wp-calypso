@@ -10,7 +10,7 @@ import { localize } from 'i18n-calypso';
 import config from 'config';
 import Gridicon from 'gridicons';
 import debugFactory from 'debug';
-import { concat } from 'lodash';
+import { concat, rearg } from 'lodash';
 
 /**
  * Internal dependencies
@@ -34,6 +34,7 @@ import {
 } from 'lib/store-transactions/step-types';
 import RecentRenewals from './recent-renewals';
 import DomainRegistrationRefundPolicy from './domain-registration-refund-policy';
+import { setTaxCountryCode } from 'lib/upgrades/actions/cart';
 
 const debug = debugFactory( 'calypso:checkout:payment:apple-pay' );
 
@@ -135,7 +136,6 @@ export class WebPaymentBox extends React.Component {
 	};
 
 	state = {
-		country: null,
 		postalCode: null,
 	};
 
@@ -496,7 +496,7 @@ export class WebPaymentBox extends React.Component {
 							name="country"
 							label={ translate( 'Country', { textOnly: true } ) }
 							countriesList={ countriesList }
-							onCountrySelected={ this.updateSelectedCountry }
+							onCountrySelected={ rearg( setTaxCountryCode, [ 1 ] ) }
 							eventFormName="Checkout Form"
 						/>
 						<Input
