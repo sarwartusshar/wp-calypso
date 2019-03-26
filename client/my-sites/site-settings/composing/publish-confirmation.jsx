@@ -57,7 +57,7 @@ class PublishConfirmation extends Component {
 								'now is handled by the new block editor.' +
 								'To show the publish confirmation with the block editor, ' +
 								'click the editor menu, then "Options", ' +
-								'and check "Enable Pre-publish Checks.'
+								'and check "Enable Pre-publish Checks".'
 						) }
 					</FormSettingExplanation>
 				</FormFieldset>
