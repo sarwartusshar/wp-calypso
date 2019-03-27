@@ -184,4 +184,12 @@ export default {
 		},
 		defaultVariation: 'original',
 	},
+	plansPresentation: {
+		datestamp: '20190403',
+		variations: {
+			tab: 50,
+			scroll: 50,
+		},
+		defaultVariation: 'tab',
+	},
 };
