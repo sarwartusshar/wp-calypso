@@ -42,6 +42,7 @@ const defaultProps = {
 		verticalId: 'argh',
 	},
 	translate: str => str,
+	bindDebounce: f => f,
 	charsToTriggerSearch: 2,
 	shouldShowPopularTopics: jest.fn(),
 	searchValue: '',

@@ -23,7 +23,6 @@ exports[`<SiteVerticalsSuggestionSearch /> should render 1`] = `
         "id": "fakeuuid-site-vertical-suggestion",
       }
     }
-    sortResults={[Function]}
     suggestions={Array []}
     value=""
   />

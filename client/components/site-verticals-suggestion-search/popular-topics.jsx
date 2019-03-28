@@ -65,7 +65,7 @@ class PopularTopics extends PureComponent {
 	onClick = event => {
 		event.preventDefault();
 		event.stopPropagation();
-		this.props.onSelect( event.currentTarget.value );
+		this.props.onSelect( event.currentTarget.value, true );
 		this.props.recordTracksEvent( 'calypso_signup_common_site_vertical_clicked', {
 			value: event.currentTarget.value,
 		} );
