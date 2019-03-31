@@ -16,6 +16,11 @@ import CompactCard from 'components/card/compact';
 import Focusable from 'components/focusable';
 import ScreenReaderText from 'components/screen-reader-text';
 
+/**
+ * Style dependencies
+ */
+import './style.scss';
+
 class Task extends PureComponent {
 	static propTypes = {
 		buttonPrimary: PropTypes.bool,
