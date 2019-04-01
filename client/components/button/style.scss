@@ -336,32 +336,3 @@ button {
 	border: 0;
 	padding: 0;
 }
-
-// ==========================================================================
-// Deprecated styles
-// ==========================================================================
-
-.button.is-link {
-	background: transparent;
-	border: none;
-	border-radius: 0;
-	padding: 0;
-	color: var( --color-link );
-	font-weight: 400;
-	font-size: inherit;
-	line-height: 1.65;
-
-	&:hover,
-	&:focus,
-	&:active,
-	&.is-active {
-		color: var( --color-link-dark );
-		box-shadow: none;
-	}
-}
-
-@keyframes button__busy-animation {
-	0% {
-		background-position: 240px 0;
-	}
-}
