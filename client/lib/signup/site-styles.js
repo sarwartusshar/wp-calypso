@@ -13,7 +13,7 @@ export const siteStyleOptions = {
 			description: i18n.translate( 'Simple, yet sophisticated, with subtle, elegant typography.', {
 				comment: 'A description of a WordPress theme style.',
 			} ),
-			id: 'default',
+			id: 'professional',
 			label: 'Professional',
 			theme: 'pub/professional-business',
 			font: {
